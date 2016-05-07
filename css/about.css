@@ -1,0 +1,117 @@
+body {
+  background-color: white;
+}
+* {
+  margin: 0;
+}
+#tabcontainer {
+  font-size: 20px;
+  font-family: 'Helvetica Neue';
+  color: black;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  display: inline-block;
+  top: 40px;
+  right: 120px;
+  position: absolute;
+  text-decoration: none;
+}
+#tabcontainer a {
+  padding-right: 23px;
+  color: black;
+  text-decoration: none;
+}
+#tabcontainer a:hover {
+  text-decoration: none;
+  opacity: 0.55;
+}
+#tabcontainer button:hover {
+  opacity: 0.55;
+  text-decoration: none;
+}
+#mission {
+  text-align: center;
+  position: relative;
+  left: -140px;
+  top: 90px;
+}
+#slogan {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  margin-right: -70%;
+  display: inline-block;
+  line-height: 90px;
+  font-family: 'Helvetica Neue';
+  font-size: 40px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  color: black;
+  left: 580px;
+}
+.SectionOne {
+  text-align: center;
+  position: relative;
+  background-color: #99ddff;
+  height: 270px;
+  width: 100%;
+}
+.SectionTwo {
+  text-align: center;
+  height: 400px;
+  width: 100%;
+}
+.SectionTwo p {
+  position: absolute;
+  top: 33%;
+  left: 8%;
+  margin: 120px;
+  line-height: 40px;
+  font-family: 'Helvetica Neue';
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  color: black;
+  padding-bottom: 40px;
+}
+.SectionThree {
+  background-color: black;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+.SectionThree p {
+  line-height: 90px;
+  font-family: 'Helvetica Neue';
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  color: #99ddff;
+}
+.SectionFour {
+  background-color: #99ddff;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+.buttonimposter {
+  color: black;
+  border-radius: 7px;
+  font-size: 100%;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: white;
+  width: 190px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 4px 12px 4px 20px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  text-decoration: none;
+}
