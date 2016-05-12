@@ -38,8 +38,8 @@
               <h4 class="modal-title">Modal Header</h4>
             </div>
             <div class="modal-body">
-
-            
+            <?php echo "This is a php test";?>
+            <?php include 'dbconnect.php';?>
             <!--  <div id="map"></div> -->
               <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
