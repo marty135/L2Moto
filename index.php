@@ -1,110 +1,107 @@
-<?php
-echo "<!doctype html>\n";
-echo "\n";
-echo "<head>\n";
-echo "  <meta charset=\"utf-8\" />\n";
-echo "\n";
-echo "  <title>L2Moto</title>\n";
-echo "  <meta name=\"description\" content=\"Queensland's greatest motorbike teachers\" />\n";
-echo "  <link rel=\"shortcut icon\" href=\"images/favicon.ico\" type=\"image/x-icon\" />\n";
-echo "  <link rel=\"icon\" href=\"images/favicon.ico\" type=\"image/ico\" />\n";
-echo "  <link rel=\"stylesheet\" href=\"css/styles.css\">\n";
-echo "  <link href=\"images/Twitter.png\" type=\"image/png\" rel=\"stylesheet\" />\n";
-echo "  <link href=\"images/Facebook.png\" type=\"image/png\" rel=\"stylesheet\" />\n";
-echo "  <link href=\"images/Instagram.png\" type=\"image/css\" rel=\"stylesheet\" />\n";
-echo "  <link href=\"images/LinkedIn.png\" type=\"image/css\" rel=\"stylesheet\" />\n";
-echo "\n";
-echo "  <script type=\"text/javascript\" src=\"http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry\"></script>\n";
-echo "  <link rel=\"stylesheet\" href=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\">\n";
-echo "  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js\"></script>\n";
-echo "  <script src=\"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>\n";
-echo "\n";
-echo "</head>\n";
-echo "\n";
-echo "<body>\n";
-echo "  <section class=\"SectionOne\">\n";
-echo "\n";
-echo "    <div id=\"tabcontainer\">\n";
-echo "      <a href=\"index.html\">Home</a>\n";
-echo "      <a href=\"about.html\">About</a>\n";
-echo "      <button type=\"button\" class=\"buttonimposter\" data-toggle=\"modal\" data-target=\"#myModal\">Review</button>\n";
-echo "      <!-- Modal -->\n";
-echo "      <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">\n";
-echo "        <div class=\"modal-dialog\">\n";
-echo "\n";
-echo "          <!-- Modal content-->\n";
-echo "          <div class=\"modal-content\">\n";
-echo "            <div class=\"modal-header\">\n";
-echo "              <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n";
-echo "              <h4 class=\"modal-title\">Modal Header</h4>\n";
-echo "            </div>\n";
-echo "            <div class=\"modal-body\">\n";
-echo "\n";
-echo "            <?php include 'dbconnect.php';?>\n";
-echo "            <!--  <div id=\"map\"></div> -->\n";
-echo "              <p>Seeing blank? Your location settings are currently turned off</p>\n";
-echo "            </div>\n";
-echo "            <div class=\"modal-footer\">\n";
-echo "              <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n";
-echo "            </div>\n";
-echo "          </div>\n";
-echo "\n";
-echo "        </div>\n";
-echo "      </div>\n";
-echo "\n";
-echo "\n";
-echo "\n";
-echo "    </div>\n";
-echo "    <div id=\"namecontainer\">\n";
-echo "      <h1 id=\"websitename\">L2Moto</h1>\n";
-echo "      <p id=\"description\">Helping you find Queensland's best QRide Providers</p>\n";
-echo "    </div>\n";
-echo "  </section>\n";
-echo "\n";
-echo "  <section class=\"SectionTwo\">\n";
-echo "    <div id=\"missionpiccontainer\">\n";
-echo "      <div id=\"missionpic1\">\n";
-echo "      </div>\n";
-echo "      <div id=\"missionpic2\">\n";
-echo "      </div>\n";
-echo "      <div id=\"missionpic3\">\n";
-echo "      </div>\n";
-echo "    </div>\n";
-echo "    <h1 id=\"missionstatement\">Ride with Confidence</h1>\n";
-echo "  </section>\n";
-echo "\n";
-echo "  <section class=\"SectionThree\">\n";
-echo "    <p>Scroll down to see your nearest QRide Provider!</p>\n";
-echo "\n";
-echo "  </section>\n";
-echo "\n";
-echo "  <section class=\"SectionFour\" id=\"feature\">\n";
-echo "    <br>\n";
-echo "    <br>\n";
-echo "    <div id=\"map\"></div>\n";
-echo "    <p>Seeing blank? Your location settings are currently turned off</p>\n";
-echo "    <script src=\"https://maps.googleapis.com/maps/api/js?callback=initMap\" async defer></script>\n";
-echo "\n";
-echo "  </section>\n";
-echo "\n";
-echo "  <section class=\"SectionFive\">\n";
-echo "    <p>Find us on Social Media</p>\n";
-echo "    <div id=\"iconpiccontainer\">\n";
-echo "      <div id=\"icon1\">\n";
-echo "      </div>\n";
-echo "      <div id=\"icon2\">\n";
-echo "      </div>\n";
-echo "      <div id=\"icon3\">\n";
-echo "      </div>\n";
-echo "      <div id=\"icon4\">\n";
-echo "      </div>\n";
-echo "    </div>\n";
-echo "\n";
-echo "  </section>\n";
-echo "\n";
-echo "  <script src=\"js/scripts.js\"></script>\n";
-echo "</body>\n";
-echo "\n";
-echo "</html>\n";
-echo "\n";
-?>
+<!doctype html>
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>L2Moto</title>
+  <meta name="description" content="Queensland's greatest motorbike teachers" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/ico" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="images/Twitter.png" type="image/png" rel="stylesheet" />
+  <link href="images/Facebook.png" type="image/png" rel="stylesheet" />
+  <link href="images/Instagram.png" type="image/css" rel="stylesheet" />
+  <link href="images/LinkedIn.png" type="image/css" rel="stylesheet" />
+
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <section class="SectionOne">
+
+    <div id="tabcontainer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <button type="button" class="buttonimposter" data-toggle="modal" data-target="#myModal">Review</button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+
+            
+            <!--  <div id="map"></div> -->
+              <p>Seeing blank? Your location settings are currently turned off</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+    <div id="namecontainer">
+      <h1 id="websitename">L2Moto</h1>
+      <p id="description">Helping you find Queensland's best QRide Providers</p>
+    </div>
+  </section>
+
+  <section class="SectionTwo">
+    <div id="missionpiccontainer">
+      <div id="missionpic1">
+      </div>
+      <div id="missionpic2">
+      </div>
+      <div id="missionpic3">
+      </div>
+    </div>
+    <h1 id="missionstatement">Ride with Confidence</h1>
+  </section>
+
+  <section class="SectionThree">
+    <p>Scroll down to see your nearest QRide Provider!</p>
+
+  </section>
+
+  <section class="SectionFour" id="feature">
+    <br>
+    <br>
+    <div id="map"></div>
+    <p>Seeing blank? Your location settings are currently turned off</p>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
+  </section>
+
+  <section class="SectionFive">
+    <p>Find us on Social Media</p>
+    <div id="iconpiccontainer">
+      <div id="icon1">
+      </div>
+      <div id="icon2">
+      </div>
+      <div id="icon3">
+      </div>
+      <div id="icon4">
+      </div>
+    </div>
+
+  </section>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
