@@ -80,6 +80,7 @@ span {
   font-weight: 300;
   color: black;
 }
+
 #map {
   position: relative;
   bottom: 20px;
@@ -247,6 +248,7 @@ span {
 .SectionFive p {
   color: white;
 }
+
 .buttonimposter {
   color: black;
   border-radius: 7px;
