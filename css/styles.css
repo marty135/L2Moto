@@ -189,6 +189,14 @@ span {
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
+
+#rankings {
+
+width: 80px;
+height: 150px;
+border-color: blue;
+
+}
 .hwaccel {
   -webkit-transform: translateZ(0);
 }
