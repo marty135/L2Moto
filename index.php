@@ -43,7 +43,7 @@
               <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
-              
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -82,7 +82,7 @@
   <section class="SectionFour" id="feature">
     <br>
     <br>
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
     <p>Seeing blank? Your location settings are currently turned off</p>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
