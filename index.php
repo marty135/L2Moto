@@ -39,9 +39,8 @@
             </div>
             <div class="modal-body">
             <?php echo "This is a php test";?>
-             <div id="map"></div>
+             
               <p>Seeing blank? Your location settings are currently turned off</p>
-              <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
             </div>
             <div id="rankings">
 
@@ -83,9 +82,9 @@
   <section class="SectionFour" id="feature">
     <br>
     <br>
-    <!-- <div id="map"></div> -->
+    <div id="map"></div>
     <p>Seeing blank? Your location settings are currently turned off</p>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
   </section>
 
