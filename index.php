@@ -99,18 +99,9 @@
         console.log('Successful login for: ' + response.id);
         document.getElementById('status').innerHTML =
           'Thanks for logging in, ' + response.id + '!';
-          //test
-          getPage();
       });
     }
 
-    function getPage() {
-    var obj =  GET graph.facebook.com
-        /search?
-          q=AMA Qride&
-          type=page;
-      console.log(JSON.stringify(obj));
-    }
   </script>
 
   <section class="SectionOne">
@@ -131,7 +122,7 @@
             </div>
             <div class="modal-body">
             <?php echo "This is a php test";?>
-          
+
             <div  class="fb-like"
                   data-share="true"
                   data-width="450"
