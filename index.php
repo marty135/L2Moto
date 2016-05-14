@@ -120,7 +120,12 @@
               <h4 class="modal-title">Modal Header</h4>
             </div>
             <div class="modal-body">
-            <?php echo "This is a php test";?>
+            <?php $mySrch = $facebook->api('/search?q=AMA Qride&type=page');
+            echo $mySrch;
+            ?>
+
+            <script>
+
             <div  class="fb-like"
                   data-share="true"
                   data-width="450"
