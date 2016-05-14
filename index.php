@@ -99,6 +99,8 @@
         console.log('Successful login for: ' + response.id);
         document.getElementById('status').innerHTML =
           'Thanks for logging in, ' + response.id + '!';
+          //test
+          getPage();
       });
     }
 
@@ -129,8 +131,7 @@
             </div>
             <div class="modal-body">
             <?php echo "This is a php test";?>
-            <button id="testButton" onclick=getPage()> Click me </button>
-
+          
             <div  class="fb-like"
                   data-share="true"
                   data-width="450"
