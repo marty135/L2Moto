@@ -21,12 +21,42 @@
 </head>
 
 <body>
+  <!--Script to initialise Facebook app -->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '106153123135194',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=106153123135194";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
   <section class="SectionOne">
 
     <div id="tabcontainer">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <button type="button" class="buttonimposter" data-toggle="modal" data-target="#myModal">Review</button>
+      <button type="button" class="buttonimposter" data-toggle="modal" data-target="#myModal">Ride Now</button>
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -39,7 +69,13 @@
             </div>
             <div class="modal-body">
             <?php echo "This is a php test";?>
-             
+            <div  class="fb-like"
+                  data-share="true"
+                  data-width="450"
+                  data-show-faces="true">
+            </div>
+
+              <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
               <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
@@ -52,7 +88,6 @@
 
         </div>
       </div>
-
 
 
     </div>
