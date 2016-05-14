@@ -34,6 +34,7 @@
       if (response.status === 'connected') {
         // Logged into your app and Facebook.
         testAPI();
+        testSearch();
       } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
         document.getElementById('status').innerHTML = 'Please log ' +
@@ -102,6 +103,19 @@
       });
     }
 
+    function testSearch() {
+
+      FB.api('/me', function(response) {
+        GET graph.facebook.com
+            /search?
+              q=AMA Qride&
+              type=page;
+              document.getElementById('searchResult').innerHTML =
+                'search result, ' + response + '!';
+              console.log(response)
+      });
+    }
+
   </script>
 
   <section class="SectionOne">
@@ -132,6 +146,8 @@
             </fb:login-button>
 
             <div id="status">
+            </div>
+            <div id="searchResult">
             </div>
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>

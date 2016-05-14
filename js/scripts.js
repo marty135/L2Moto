@@ -155,13 +155,3 @@ document.getElementById('icon3').onclick = function() {
 document.getElementById('icon4').onclick = function() {
   window.location.href = 'https://www.facebook.com/';
 };
-
-document.getElementById('testButton').onclick = function() {
-
-  var obj =  GET graph.facebook.com
-      /search?
-        q=AMA Qride&
-        type=page;
-    console.log(JSON.stringify(obj));
-
-};
