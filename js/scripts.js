@@ -142,6 +142,14 @@ function httpGet() {
   return xmlHttp.responseText;
 }
 
+
+function getSearchResult() {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", "https://maps.googleapis.com/maps/api/place/textsearch/json?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q"
+  xmlHttp.send(null);
+  alert(JSON.stringify(xmlHttp))
+}
+
 // Adding onclick functions to social media icons - links to websites
 document.getElementById('icon1').onclick = function() {
   window.location.href = 'https://twitter.com/?lang=en';

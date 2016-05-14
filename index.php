@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q&libraries=places"></script>
 </head>
 
 <body>
@@ -34,7 +34,6 @@
       if (response.status === 'connected') {
         // Logged into your app and Facebook.
         testAPI();
-        testSearch();
       } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
         document.getElementById('status').innerHTML = 'Please log ' +
@@ -103,18 +102,7 @@
       });
     }
 
-    function testSearch() {
 
-      FB.api('/me', function(response) {
-        GET graph.facebook.com
-            /search?
-              q=AMA Qride&
-              type=page;
-              document.getElementById('searchResult').innerHTML =
-                'search result, ' + response + '!';
-              console.log(response)
-      });
-    }
 
   </script>
 
@@ -147,8 +135,7 @@
 
             <div id="status">
             </div>
-            <div id="searchResult">
-            </div>
+            <button id="testButton" onclick=getSearchResult()> test <button>
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
