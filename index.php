@@ -101,6 +101,14 @@
           'Thanks for logging in, ' + response.id + '!';
       });
     }
+
+    function getPage() {
+    var obj =  GET graph.facebook.com
+        /search?
+          q=AMA Qride&
+          type=page;
+      console.log(JSON.stringify(obj));
+    }
   </script>
 
   <section class="SectionOne">
@@ -120,11 +128,8 @@
               <h4 class="modal-title">Modal Header</h4>
             </div>
             <div class="modal-body">
-            <?php $mySrch = $facebook->api('/search?q=AMA Qride&type=page');
-            echo $mySrch;
-            ?>
-
-            <script>
+            <?php echo "This is a php test";?>
+            <button id="testButton" onclick=getPage()> Click me </button>
 
             <div  class="fb-like"
                   data-share="true"
