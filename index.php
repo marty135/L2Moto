@@ -135,7 +135,7 @@
 
             <div id="status">
             </div>
-            <button id="testButton" onclick=getSearchResult()> test <button>
+            
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">

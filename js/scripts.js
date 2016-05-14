@@ -150,6 +150,12 @@ function getSearchResult() {
   alert(JSON.stringify(xmlHttp))
 }
 
+$(document).ready(function() {
+ // executes when HTML-Document is loaded and DOM is ready
+ getSearchResult();
+});
+
+
 // Adding onclick functions to social media icons - links to websites
 document.getElementById('icon1').onclick = function() {
   window.location.href = 'https://twitter.com/?lang=en';
