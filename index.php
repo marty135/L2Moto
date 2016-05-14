@@ -122,7 +122,7 @@
             </div>
             <div class="modal-body">
             <?php echo "This is a php test";?>
-
+            <button id="testButton"> Test </button>
             <div  class="fb-like"
                   data-share="true"
                   data-width="450"
