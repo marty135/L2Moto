@@ -124,7 +124,7 @@
             </div>
             <div class="modal-body">
             <?php echo "This is a php test";?>
-            <button id="testButton"> Test </button>
+            <button id="testButton" onclick="getSearchResult();"> Test </button>
             <div  class="fb-like"
                   data-share="true"
                   data-width="450"
@@ -135,7 +135,7 @@
 
             <div id="status">
             </div>
-            
+
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
