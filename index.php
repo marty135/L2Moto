@@ -64,6 +64,14 @@
       version    : 'v2.5' // use graph api version 2.5
     });
 
+
+    function getSearchResult() {
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open("GET", "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q"
+      xmlHttp.send(null);
+      alert(xmlHttp.responseText);
+    }
+    
     // Now that we've initialized the JavaScript SDK, we call
     // FB.getLoginStatus().  This function gets the state of the
     // person visiting this page and can return one of three states to
