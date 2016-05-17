@@ -65,7 +65,7 @@
                 $value = urlencode($value);
               }
 
-            for($i = 0; $i < count($provider_names[0]); $i++) {
+            for($i = 0; $i < count($provider_names); $i++) {
               echo $provider_names[$i];
             }
             //for loop over each Q-Ride provider
