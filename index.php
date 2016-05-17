@@ -39,11 +39,26 @@
               <h4 class="modal-title">Modal Header</h4>
             </div>
             <div class="modal-body">
+
               <?php
+                $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
+
+                $file = fopen($providers, 'r');
+                while (($line = fgetcsv($file)) !== FALSE) {
+                  //$line is an array of the csv elements
+                  console.log($line);
+                }
+                fclose($file);
+
+
+                //for loop over each Q-Ride provider
                 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
-                $output = file_get_contents($url);
-                echo $output;
+                searchResult = file_get_contents($url);
+                //parse output to get their place_id
+                echo searchResult;
+                //after that, with the place_id make another request with that to get the rating.
                 ?>
+
             <button id="testButton"> Test </button>
             <div  class="fb-like"
                   data-share="true"
