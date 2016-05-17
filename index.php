@@ -46,7 +46,7 @@
                  $file = fopen($providers, 'r');
                 while (($line = fgetcsv($file)) !== FALSE) {
                   //$line is an array of the csv elements
-                  console.log($line);
+                echo "<script type='text/javascript'>alert('$line');</script>";
                 }
                 fclose($file);
 
