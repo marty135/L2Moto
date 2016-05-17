@@ -66,7 +66,7 @@
               }
 
             for($i = 0; $i < count($provider_names[0]); $i++) {
-              echo $provider_names[0][$i];
+              echo $provider_names[$i];
             }
             //for loop over each Q-Ride provider
             $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
