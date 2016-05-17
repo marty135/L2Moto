@@ -245,10 +245,3 @@ function testAPI() {
 /////////////////////////////////////////////////////////////////////////////
 ////////  Google Places API to get Q-Ride data
 /////////////////////////////////////////////////////////////////////////////
-
-
-$("testButton").click(function(){
-    $.ajax({url: "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q", success: function(result){
-        $("#status").html(result);
-    }});
-});
