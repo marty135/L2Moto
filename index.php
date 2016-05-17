@@ -64,7 +64,10 @@
             foreach ($provider_names as &$value) {
                 $value = urlencode($value);
               }
+              echo print_r($provider_names);
 
+            //loop through each provider in provider names and make a request to google API
+            //to get the rating data for the provider
             for($i = 1; $i < count($provider_names); $i++) {
               $provider_name = $provider_names[$i];
               $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+$provider_name+'&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
