@@ -143,6 +143,12 @@ function httpGet() {
 }
 
 
+function getSearchResult() {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q",false);
+  xmlHttp.send(null);
+  alert(xmlHttp.responseText);
+}
 
 
 
