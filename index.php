@@ -66,7 +66,13 @@
               }
 
             for($i = 1; $i < count($provider_names); $i++) {
-              echo $provider_names[$i];
+              $provider_name = (string)$provider_names[$i];
+              $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+$provider_name+'&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
+              $searchResult = file_get_contents($url);
+              //parse output to get their rating
+              $json_output = json_decode($searchResult, false);
+              echo print_r($json_output->results[0]->rating);
+
             }
             //for loop over each Q-Ride provider
             $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
