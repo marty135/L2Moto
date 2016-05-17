@@ -41,14 +41,14 @@
             <div class="modal-body">
 
               <?php
-                $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
+              //  $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
 
-                $file = fopen($providers, 'r');
-                while (($line = fgetcsv($file)) !== FALSE) {
+              //  $file = fopen($providers, 'r');
+              //  while (($line = fgetcsv($file)) !== FALSE) {
                   //$line is an array of the csv elements
-                  console.log($line);
-                }
-                fclose($file);
+            //      console.log($line);
+            //    }
+            //    fclose($file);
 
 
                 //for loop over each Q-Ride provider
