@@ -55,10 +55,8 @@
                   //echo $data[0] . "<br />\n";
               }
             }
-            $result = array_unique($provider_names);
-            echo print_r($result);
-
-
+            $provider_names = array_unique($provider_names);
+            echo print_r($provider_names);
             fclose($handle);
           }
 
