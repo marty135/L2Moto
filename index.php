@@ -60,21 +60,21 @@
             fclose($handle);
           }
 
+            //encode provider names
             foreach ($provider_names as &$value) {
                 $value = urlencode($value);
               }
-              echo print_r($provider_names);
-                //for loop over each Q-Ride provider
-                $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
-                $searchResult = file_get_contents($url);
-                //parse output to get their place_id
-                // echo $searchResult['place_id'];
-                $json_output = json_decode($searchResult, false);
-                echo print_r($json_output->results[0]->rating);
 
-                //after that, with the place_id make another request with that to get the rating.
-
-                ?>
+            for($i = 0; $i < count($provider_names[0]); $i++) {
+              echo $provider_names[0][$i];
+            }
+            //for loop over each Q-Ride provider
+            $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
+            $searchResult = file_get_contents($url);
+            //parse output to get their rating
+            $json_output = json_decode($searchResult, false);
+            echo print_r($json_output->results[0]->rating);
+            ?>
 
             <button id="testButton"> Test </button>
             <div  class="fb-like"
