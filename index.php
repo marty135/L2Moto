@@ -64,7 +64,6 @@
             foreach ($provider_names as &$value) {
                 $value = urlencode($value);
               }
-              echo print_r($provider_names);
 
             //loop through each provider in provider names and make a request to google API
             //to get the rating data for the provider
@@ -72,9 +71,10 @@
               $provider_name = $provider_names[$i];
               $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+$provider_name+'&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
               $searchResult = file_get_contents($url);
+              echo($searchResult);
               //parse output to get their rating
               $json_output = json_decode($searchResult, false);
-              echo print_r($json_output->results[0]->rating);
+              //echo print_r($json_output->results[0]->rating);
 
             }
             //for loop over each Q-Ride provider
