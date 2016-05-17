@@ -69,7 +69,7 @@
             //to get the rating data for the provider
             for($i = 1; $i < count($provider_names); $i++) {
               $provider_name = $provider_names[$i];
-              $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+$provider_name+'&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
+              $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+(string)$provider_name+'&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
               $searchResult = file_get_contents($url);
               echo($searchResult);
               //parse output to get their rating
