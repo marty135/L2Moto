@@ -56,25 +56,18 @@
               }
             }
             $provider_names = array_unique($provider_names);
-          //  echo print_r($provider_names);
+            echo print_r($provider_names);
             fclose($handle);
           }
 
                 //for loop over each Q-Ride provider
                 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
                 $searchResult = file_get_contents($url);
-
                 //parse output to get their place_id
                 // echo $searchResult['place_id'];
                 $json_output = json_decode($searchResult, false);
                 echo print_r($json_output->results[0]->rating);
-                //echo print_r($json_output[0]['rating']);
 
-                //foreach ($json_output as &$value) {
-                  //    echo print_r($value);
-                //}
-
-                //echo print_r($json_output);
                 //after that, with the place_id make another request with that to get the rating.
 
                 ?>
