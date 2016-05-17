@@ -49,14 +49,11 @@
                   if (($handle = fopen($providers, "r")) !== FALSE) {
                     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
                       $num = count($data);
-                    //  echo $data[0] . "<br />\n";
+                      //push each qride provider name to array
                       array_push($provider_names,$data[0]);
-                    //  echo "<p> $num fields in line $row: <br /></p>\n";
                       $row++;
-                for ($c=0; $c < $num; $c++) {
-                  //echo $data[0] . "<br />\n";
-              }
-            }
+
+                    }
             $provider_names = array_unique($provider_names);
             //echo print_r($provider_names);
             fclose($handle);
