@@ -51,7 +51,7 @@
                     //    echo "<p> $num fields in line $row: <br /></p>\n";
                           $row++;
                           for ($c=0; $c < $num; $c++) {
-                          //  echo $data[$c] . "<br />\n";
+                            echo $data[$c] . "<br />\n";
                           }
                         }
                         fclose($handle);
@@ -62,7 +62,7 @@
                 $url = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
                 $searchResult = file_get_contents($url);
                 //parse output to get their place_id
-                echo $searchResult;
+              //  echo $searchResult;
                 //after that, with the place_id make another request with that to get the rating.
                 ?>
 
