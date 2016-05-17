@@ -21,15 +21,7 @@
 </head>
 
 <body>
-<script>
 
-$("testButton").click(function(){
-    $.ajax({url: "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q", success: function(result){
-        alert(result);
-    }});
-});
-
-</script>
   <section class="SectionOne">
 
     <div id="tabcontainer">
@@ -47,7 +39,11 @@ $("testButton").click(function(){
               <h4 class="modal-title">Modal Header</h4>
             </div>
             <div class="modal-body">
-            <?php echo "This is a php test";?>
+              <?php
+                $url = 'https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
+                $output = file_get_contents($url);
+                echo $output;
+                ?>
             <button id="testButton"> Test </button>
             <div  class="fb-like"
                   data-share="true"
