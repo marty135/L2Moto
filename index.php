@@ -43,6 +43,8 @@
               <?php
                 $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
                 $provider_names = [];
+                $provider_ratings = [];
+
                   $row = 1;
                   if (($handle = fopen($providers, "r")) !== FALSE) {
                     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
@@ -74,16 +76,10 @@
               $searchResult = file_get_contents($url);
               //parse output to get their rating
               $json_output = json_decode($searchResult, false);
-              
-              echo print_r($json_output->results[0]->rating);
-
+              array_push($provider_ratings,$json_output->results[0]->rating);
             }
-            //for loop over each Q-Ride provider
-            $url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q';
-            $searchResult = file_get_contents($url);
-            //parse output to get their rating
-            $json_output = json_decode($searchResult, false);
-            echo print_r($json_output->results[0]->rating);
+
+            echo print_r($provider_ratings);
             ?>
 
             <button id="testButton"> Test </button>
