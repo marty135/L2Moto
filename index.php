@@ -66,7 +66,7 @@
                 //parse output to get their place_id
                 // echo $searchResult['place_id'];
                 $json_output = json_decode($searchResult, true);
-                echo print_r($json_output[0]);
+                echo print_r($json_output[0][rating]);
                 //after that, with the place_id make another request with that to get the rating.
 
                 ?>
