@@ -21,13 +21,6 @@
 </head>
 
 <body>
-  <!--Script to initialise Facebook app -->
-  <script>
-
-
-
-
-  </script>
 
   <section class="SectionOne">
 

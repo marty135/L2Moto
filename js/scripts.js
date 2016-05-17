@@ -142,17 +142,6 @@ function httpGet() {
   return xmlHttp.responseText;
 }
 
-
-function getSearchResult() {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q",false);
-  xmlHttp.send(null);
-  alert(xmlHttp.responseText);
-}
-
-
-
-
 // Adding onclick functions to social media icons - links to websites
 document.getElementById('icon1').onclick = function() {
   window.location.href = 'https://twitter.com/?lang=en';
@@ -168,7 +157,10 @@ document.getElementById('icon4').onclick = function() {
 };
 
 
-///////////////Facebook API/////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///// Below is using Facebook API to pull review data from each Q-Ride
+///// Provider.
+///////////////////////////////////////////////////////////////////////
 
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
@@ -248,3 +240,15 @@ function testAPI() {
       'Thanks for logging in, ' + response.id + '!';
   });
 }
+
+
+/////////////////////////////////////////////////////////////////////////////
+////////  Google Places API to get Q-Ride data
+/////////////////////////////////////////////////////////////////////////////
+
+
+$("testButton").click(function(){
+    $.ajax({url: "https://maps.googleapis.com/maps/api/place/textsearch/xml?query=%22london%20eye%22&key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q", success: function(result){
+        $("#status").html(result);
+    }});
+});
