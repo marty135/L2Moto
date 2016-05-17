@@ -42,18 +42,22 @@
 
               <?php
                 $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
-
+                $provider_names = [];
                   $row = 1;
                   if (($handle = fopen($providers, "r")) !== FALSE) {
                     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
                       $num = count($data);
-                      echo $data[0] . "<br />\n";
+                    //  echo $data[0] . "<br />\n";
+                      array_push($provider_names,$data[0]);
                     //  echo "<p> $num fields in line $row: <br /></p>\n";
                       $row++;
                 for ($c=0; $c < $num; $c++) {
                   //echo $data[0] . "<br />\n";
               }
             }
+
+            echo print_r($provider_names);
+
             fclose($handle);
           }
 
