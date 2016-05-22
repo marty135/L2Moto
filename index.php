@@ -84,7 +84,7 @@
             // foreach($provider_names as &$name) {
             //  $name = urldecode($name);
              foreach($provider_ratings as &$rating) {
-                if(is_int($rating)) {
+                if(is_numeric($rating)) {
                   echo "<li>"." ".$rating."</li>";
 
                  }
