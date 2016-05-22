@@ -13,7 +13,10 @@ hr {
 ul {
     list-style: none; /* Remove list bullets */
     background-image: url('../images/listimage.jpg');
-
+}
+li {
+  list-style: none; /* Remove list bullets */
+  background-image: url('../images/listimage.jpg');
 }
 span {
   display: inline-block;
