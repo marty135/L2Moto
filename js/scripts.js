@@ -250,7 +250,9 @@ function getFBRating() {
         if (response && !response.error) {
           /* handle the result */
           document.getElementById('status').innerHTML =
-            'Rating: ' + response.data + '!';
+           for (i=0; i < response.data.length; i++) {
+             JSON.stringify(response.data[i]) + "<br>";
+           }
         } else {
           document.getElementById('status').innerHTML =
             JSON.stringify(response.error);
