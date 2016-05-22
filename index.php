@@ -76,11 +76,11 @@
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
 
-            $have_been_rated = [$provider_names[5],$provider_names[7],$provider_names[15],$provider_names[16]]
+        //    $have_been_rated = [$provider_names[5],$provider_names[7],$provider_names[15],$provider_names[16]]
 
 
 
-           echo print_r($have_been_rated);
+          // echo print_r($have_been_rated);
             //foreach($provider_names as &$name) {
             //  $name = urldecode($name);
             //  foreach($provider_ratings as &$rating) {
