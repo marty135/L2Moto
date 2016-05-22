@@ -79,13 +79,13 @@
 
              //check to see if there is a rating associated with the provider name, if there is then
              //it will be displayed.
-             echo "<ul>"
+             echo "<ul>";
              foreach($provider_ratings as &$rating) {
                if (preg_match('/[A-Za-z]/', $rating) && preg_match('/[0-9]/', $rating)) {
                   echo "<li>"." ".$rating."</li>";
               }
             }
-            echo "</ul>"
+            echo "</ul>";
 
             ?>
 
