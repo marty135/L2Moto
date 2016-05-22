@@ -245,7 +245,7 @@ function testAPI() {
 // get fb rating
 function getFBRating() {
   /* make the API call */
-  FB.api("/184369771610803/ratings",
+  FB.api("/me/accounts",
       function (response) {
         if (response && !response.error) {
           /* handle the result */
