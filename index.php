@@ -58,7 +58,7 @@
             //echo print_r($provider_names);
             fclose($handle);
           }
-
+          echo print_r($provider_names);
 
             //encode provider names
             foreach ($provider_names as &$value) {
