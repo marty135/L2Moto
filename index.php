@@ -75,7 +75,7 @@
               $json_output = json_decode($searchResult, false);
               array_push($provider_ratings, urldecode($provider_name)." ".$json_output->results[0]->rating);
             }
-            
+
              //check to see if there is a rating associated with the provider name, if there is then
              //it will be displayed.
              foreach($provider_ratings as &$rating) {

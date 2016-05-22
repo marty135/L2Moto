@@ -10,6 +10,9 @@ hr {
   background: white;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#CCC), to(#CCC), color-stop(50%, #333));
 }
+ul {
+  list-style-type: none;
+}
 span {
   display: inline-block;
   vertical-align: middle;
@@ -80,7 +83,6 @@ span {
   font-weight: 300;
   color: black;
 }
-
 #map {
   position: relative;
   bottom: 20px;
@@ -189,13 +191,10 @@ span {
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
-
 #rankings {
-
-width: 80px;
-height: 150px;
-border-color: blue;
-
+  width: 80px;
+  height: 150px;
+  border-color: blue;
 }
 .hwaccel {
   -webkit-transform: translateZ(0);
@@ -256,7 +255,6 @@ border-color: blue;
 .SectionFive p {
   color: white;
 }
-
 .buttonimposter {
   color: black;
   border-radius: 7px;
