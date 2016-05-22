@@ -173,6 +173,7 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
     testAPI();
+    getFBRating();
   } else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' +
@@ -240,6 +241,21 @@ function testAPI() {
       'Thanks for logging in, ' + response.id + '!';
   });
 }
+
+// get fb rating
+function getFBRating() {
+  /* make the API call */
+  FB.api("/184369771610803/ratings",
+      function (response) {
+        if (response && !response.error) {
+          /* handle the result */
+          document.getElementById('status').innerHTML =
+            'Rating: ' + response.rating + '!';
+        }
+      }
+  );
+}
+
 
 
 /////////////////////////////////////////////////////////////////////////////
