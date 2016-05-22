@@ -77,7 +77,7 @@
             }
 
              foreach($provider_ratings as &$rating) {
-                if($rating >= 0) {
+                if($rating >= 0 && $rating != null) {
                   echo "<li>"." ".$rating."</li>";
                  }
               }
