@@ -77,9 +77,8 @@
             }
 
              foreach($provider_ratings as &$rating) {
-                if($rating >= 0 && $rating != null) {
+               if (preg_match('/[a-z]+[0-9]+/', $rating)) {}
                   echo "<li>"." ".$rating."</li>";
-                 }
               }
 
             ?>
