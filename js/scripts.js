@@ -249,8 +249,7 @@ function getFBRating() {
       function (response) {
         if (response && !response.error) {
           /* handle the result */
-          document.getElementById('status').innerHTML =
-           JSON.stringify(response.data);
+        
         } else {
           document.getElementById('status').innerHTML =
             JSON.stringify(response.error);
