@@ -14,8 +14,8 @@ ul {
     list-style: none; /* Remove list bullets */
     padding: 0;
     margin: 0;
-    background-color: grey;
 }
+
 span {
   display: inline-block;
   vertical-align: middle;
@@ -85,6 +85,10 @@ span {
   font-variant: normal;
   font-weight: 300;
   color: black;
+}
+#rating-web-feature {
+background-color: grey;
+
 }
 #map {
   position: relative;
