@@ -10,8 +10,10 @@ hr {
   background: white;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#CCC), to(#CCC), color-stop(50%, #333));
 }
-li {
-  list-style-type: none;
+ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+    margin: 0;
 }
 span {
   display: inline-block;

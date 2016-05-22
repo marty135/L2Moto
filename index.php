@@ -80,7 +80,7 @@
              //it will be displayed.
              foreach($provider_ratings as &$rating) {
                if (preg_match('/[A-Za-z]/', $rating) && preg_match('/[0-9]/', $rating)) {
-                  echo "<li>"." ".$rating."</li>";
+                  echo "<ul>"." ".$rating."</ul>";
               }
             }
 
