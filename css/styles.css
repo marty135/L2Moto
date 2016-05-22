@@ -88,7 +88,8 @@ span {
 }
 #rating-web-feature {
 background-color: grey;
-
+height: 300px;
+width: 500px;
 }
 #map {
   position: relative;
