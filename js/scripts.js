@@ -250,9 +250,7 @@ function getFBRating() {
         if (response && !response.error) {
           /* handle the result */
           document.getElementById('status').innerHTML =
-           for (i=0; i < response.data.length; i++) {
-             JSON.stringify(response.data[i]) + "<br>";
-           }
+           JSON.stringify(response.data);
         } else {
           document.getElementById('status').innerHTML =
             JSON.stringify(response.error);
