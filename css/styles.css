@@ -86,11 +86,7 @@ span {
   font-weight: 300;
   color: black;
 }
-#rating-web-feature {
-background-color: grey;
-height: 300px;
-width: 500px;
-}
+
 #map {
   position: relative;
   bottom: 20px;
@@ -279,4 +275,9 @@ width: 500px;
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
   text-decoration: none;
+}
+
+.modal-body {
+  background-color: grey;
+
 }
