@@ -12,11 +12,9 @@ hr {
 }
 ul {
     list-style: none; /* Remove list bullets */
-    background-image: url('../images/listimage.jpg');
-}
-li {
-  list-style: none; /* Remove list bullets */
-  background-image: url('../images/listimage.jpg');
+    padding: 0;
+    margin: 0;
+    background-color: grey;
 }
 span {
   display: inline-block;
