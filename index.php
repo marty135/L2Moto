@@ -79,7 +79,7 @@
             }
             foreach($provider_names as &$name) {
 
-                foreach($rating as &$rating) {
+                foreach($provider_ratings as &$rating) {
                   echo "<li>".$name." ".$rating."</li>";
                 }
             }
