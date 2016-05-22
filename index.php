@@ -75,16 +75,16 @@
               $json_output = json_decode($searchResult, false);
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
-            foreach($provider_names as &$name) {
-              $name = urldecode($name);
-              foreach($provider_ratings as &$rating) {
-                if($rating) {
-                  echo "<li>".$name." ".$rating."</li>";
-                
-                  }
-                }
-            }
-            //echo print_r($provider_ratings);
+            //foreach($provider_names as &$name) {
+            //  $name = urldecode($name);
+            //  foreach($provider_ratings as &$rating) {
+            //    if($rating) {
+            //      echo "<li>".$name." ".$rating."</li>";
+            //
+            //      }
+            //    }
+            //}
+            echo print_r($provider_ratings);
             ?>
 
             <button id="testButton"> Test </button>
