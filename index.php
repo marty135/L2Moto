@@ -73,10 +73,10 @@
               $searchResult = file_get_contents($url);
               //parse output to get their rating
               $json_output = json_decode($searchResult, false);
-              array_push($provider_ratings,$json_output->results[0]->rating);
+              array_push($provider_name." ".$provider_ratings,$json_output->results[0]->rating);
             }
 
-        //    $have_been_rated = [$provider_names[5],$provider_names[7],$provider_names[15],$provider_names[16]]
+            //$have_been_rated = [$provider_names[5],$provider_names[7],$provider_names[15],$provider_names[16]]
 
 
 
@@ -90,7 +90,7 @@
             //      }
             //    }
             //}
-            //echo print_r($provider_ratings);
+            echo print_r($provider_ratings);
             ?>
 
             <button id="testButton"> Test </button>
