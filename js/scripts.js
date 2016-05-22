@@ -251,6 +251,9 @@ function getFBRating() {
           /* handle the result */
           document.getElementById('status').innerHTML =
             'Rating: ' + response.rating + '!';
+        } else {
+          document.getElementById('status').innerHTML =
+            'Something went wrong';
         }
       }
   );
