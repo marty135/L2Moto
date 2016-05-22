@@ -75,6 +75,15 @@
               $json_output = json_decode($searchResult, false);
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
+
+            $have_been_rated = []
+            for($i = 0; $i < count($provider_names); $i++) {
+            if ($i == 5 || $i == 7 || $i == 15 || $i == 16) {
+              array_push($have_been_rated, $provider_names[$i]);
+            }
+
+            }
+            echo print_r($have_been_rated);
             //foreach($provider_names as &$name) {
             //  $name = urldecode($name);
             //  foreach($provider_ratings as &$rating) {
@@ -84,7 +93,7 @@
             //      }
             //    }
             //}
-            echo print_r($provider_ratings);
+            //echo print_r($provider_ratings);
             ?>
 
             <button id="testButton"> Test </button>
