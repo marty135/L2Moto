@@ -80,7 +80,7 @@
             foreach($provider_names as &$name) {
                 $name = urldecode($name);
                 foreach($provider_ratings as &$rating) {
-                  if($rating >= 0 && <= 5) {
+                  if($rating) {
                   echo "<li>".$name." ".$rating."</li>";
                   }
                 }
