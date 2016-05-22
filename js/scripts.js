@@ -253,7 +253,7 @@ function getFBRating() {
             'Rating: ' + response.rating + '!';
         } else {
           document.getElementById('status').innerHTML =
-            'Something went wrong';
+            response.error;
         }
       }
   );
