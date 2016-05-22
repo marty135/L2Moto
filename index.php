@@ -59,7 +59,12 @@
             fclose($handle);
           }
 
+          foreach($provider_names as &$name) {
 
+              foreach($provider_ratings as &$rating) {
+                echo "<li>".$name." ".$rating."</li>";
+              }
+          }
 
             //encode provider names
             foreach ($provider_names as &$value) {
@@ -77,12 +82,7 @@
               $json_output = json_decode($searchResult, false);
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
-            foreach($provider_names as &$name) {
 
-                foreach($provider_ratings as &$rating) {
-                  echo "<li>".$name." ".$rating."</li>";
-                }
-            }
             //echo print_r($provider_ratings);
             ?>
 
