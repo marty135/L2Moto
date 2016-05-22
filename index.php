@@ -59,6 +59,10 @@
             fclose($handle);
           }
 
+            foreach($provider_names as &$name) {
+                echo $name;
+            }
+
             //encode provider names
             foreach ($provider_names as &$value) {
                 $value = urlencode($value);
@@ -76,7 +80,7 @@
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
 
-            echo print_r($provider_ratings);
+            //echo print_r($provider_ratings);
             ?>
 
             <button id="testButton"> Test </button>
