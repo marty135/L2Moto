@@ -75,10 +75,10 @@
               $json_output = json_decode($searchResult, false);
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
-            
+
             foreach ($provider_names as &$name) {
               foreach($provider_ratings as &$rating) {
-                echo "<li>" + $name + " " + $rating + <"/li">;
+                echo "<li>" + print_r($name) + " " + print_r($rating) + <"/li">;
               }
             }
             //echo print_r($provider_ratings);
