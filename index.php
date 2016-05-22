@@ -75,15 +75,14 @@
               $json_output = json_decode($searchResult, false);
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
-
-            echo print_r($provider_ratings);
+            
+            foreach ($provider_names as &$name) {
+              foreach($provider_ratings as &$rating) {
+                echo "<li>" + $name + " " + $rating + <"/li">;
+              }
+            }
+            //echo print_r($provider_ratings);
             ?>
-
-
-            <div id="map"></div>
-            <p>Seeing blank? Your location settings are currently turned off</p>
-            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-
 
             <button id="testButton"> Test </button>
             <div  class="fb-like"
@@ -138,6 +137,9 @@
   <section class="SectionFour" id="feature">
     <br>
     <br>
+    <div id="map"></div>
+    <p>Seeing blank? Your location settings are currently turned off</p>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
   </section>
 
