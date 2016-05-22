@@ -76,21 +76,12 @@
               array_push($provider_ratings, urldecode($provider_name)." ".$json_output->results[0]->rating);
             }
 
-            //$have_been_rated = [$provider_names[5],$provider_names[7],$provider_names[15],$provider_names[16]]
-
-
-
-          // echo print_r($have_been_rated);
-            // foreach($provider_names as &$name) {
-            //  $name = urldecode($name);
              foreach($provider_ratings as &$rating) {
-                if(($rating >= 0)) {
+                if($rating >= 0) {
                   echo "<li>"." ".$rating."</li>";
-
                  }
               }
-            //}
-          //  echo print_r($provider_ratings);
+
             ?>
 
             <button id="testButton"> Test </button>
