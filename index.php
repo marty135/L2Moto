@@ -60,7 +60,9 @@
           }
 
             foreach($provider_names as &$name) {
-                echo "<li>" + $name "</li>";
+                echo "<li>".$name "</li>";
+                //foreach($rating as &$rating) {
+                //}
             }
 
             //encode provider names
