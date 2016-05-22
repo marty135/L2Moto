@@ -60,7 +60,7 @@
           }
 
             foreach($provider_names as &$name) {
-                echo $name;
+                echo "<li>" + $name "</li>";
             }
 
             //encode provider names
