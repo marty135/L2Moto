@@ -76,12 +76,7 @@
               array_push($provider_ratings,$json_output->results[0]->rating);
             }
 
-            foreach ($provider_names as &$name) {
-              foreach($provider_ratings as &$rating) {
-                echo "<li>" + print_r($name) + " " + print_r($rating) + <"/li">;
-              }
-            }
-            //echo print_r($provider_ratings);
+            echo print_r($provider_ratings);
             ?>
 
             <button id="testButton"> Test </button>
