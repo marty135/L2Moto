@@ -25,6 +25,8 @@ function initMap() {
       //lastly, finds the closest QRide Provider
       var shortestPath = findShortestPath(currPos, providerCoordinates);
 
+      alert(shortestPath);
+
       infoWindow.setPosition(shortestPath);
       infoWindow.setContent('This is your closest QRide Provider.');
       map.setCenter(shortestPath);
