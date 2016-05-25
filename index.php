@@ -77,7 +77,8 @@
               array_push($provider_ratings, $json_output->results[0]->rating);
             }
 
-             echo print_r($provider_ratings);
+             $result = array_combine($provider_names, $provider_ratings);
+             echo print_r($result);
              //urldecode($provider_name)." ".
              //check to see if there is a rating associated with the provider name, if there is then
              //it will be displayed.
