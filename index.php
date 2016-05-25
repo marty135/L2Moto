@@ -77,12 +77,8 @@
               array_push($provider_ratings, $json_output->results[0]->rating);
             }
 
-            for $i = 0; $i < count($provider_names); $i++) {
-              $result = array_combine($provider_names[$i], $provider_ratings[$i]);
-              echo print_r($result);
 
-             }
-                          //urldecode($provider_name)." ".
+             //urldecode($provider_name)." ".
              //check to see if there is a rating associated with the provider name, if there is then
              //it will be displayed.
              //foreach($provider_ratings as &$rating) {
@@ -106,7 +102,7 @@
 
             <div id="status">
             </div>
-
+            <div id="map"></div>
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
@@ -148,7 +144,9 @@
   <section class="SectionFour" id="feature">
     <br>
     <br>
-    <div id="map"></div>
+
+    <!-- Map was here -->
+
     <p>Seeing blank? Your location settings are currently turned off</p>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 
