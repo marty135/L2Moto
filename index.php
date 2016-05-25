@@ -102,7 +102,7 @@
 
             <div id="status">
             </div>
-            <div id="map"></div>
+            <!--Add second map, for seeing the clicked locations -->
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
@@ -144,9 +144,7 @@
   <section class="SectionFour" id="feature">
     <br>
     <br>
-
-    <!-- Map was here -->
-
+    <div id="map"></div>
     <p>Seeing blank? Your location settings are currently turned off</p>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
 

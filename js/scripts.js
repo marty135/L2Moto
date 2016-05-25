@@ -38,9 +38,10 @@ function initMap() {
 }
 
 
-///////////////////////
-//// TEST
-////////////////////////
+////////////////////////////////////////////////////////
+//// Enables Map to work in Modal
+////////////////////////////////////////////////////////
+
 google.maps.event.addDomListener(window, 'load', initialize);
 
 google.maps.event.addDomListener(window, "resize", resizingMap());
@@ -61,11 +62,7 @@ function resizingMap() {
    google.maps.event.trigger(map, "resize");
    map.setCenter(center);
 }
-
-////////////////////
-/// TESt END
-///////////////////
-
+////////////////////////////////////////////////////////////////////////////////
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
