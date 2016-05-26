@@ -182,10 +182,3 @@ document.getElementById('icon3').onclick = function() {
 document.getElementById('icon4').onclick = function() {
   window.location.href = 'https://www.facebook.com/';
 };
-
-
-function secondMap() {
-
-  mapSecond = new google.maps.Map(document.getElementById('secondmap'),mapOptions);
-
-}
