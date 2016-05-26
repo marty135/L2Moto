@@ -95,11 +95,7 @@
                   data-width="450"
                   data-show-faces="true">
             </div>
-            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-            </fb:login-button>
 
-            <div id="status">
-            </div>
             <!--Add second map, for seeing the clicked locations -->
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
