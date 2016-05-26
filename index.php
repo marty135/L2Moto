@@ -40,7 +40,7 @@
               <h4 class="modal-title"> Web feature </h4>
             </div>
             <div class="modal-body">
-              <div class="secondmap">
+              <div id="secondmap" onload="secondMap()">
               <!--Add second map, for seeing the clicked locations -->
                 <p>Seeing blank? Your location settings are currently turned off</p>
               </div>
