@@ -2,7 +2,8 @@
 
 <head>
   <meta charset="utf-8" />
-
+  <!--Meta tag to allow for mobile accessibility -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>L2Moto</title>
   <meta name="description" content="Queensland's greatest motorbike teachers" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -90,13 +91,9 @@
             ?>
 
           </div>
-            <div  class="fb-like"
-                  data-share="true"
-                  data-width="450"
-                  data-show-faces="true">
-            </div>
 
             <!--Add second map, for seeing the clicked locations -->
+
             <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
