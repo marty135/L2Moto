@@ -182,3 +182,44 @@ document.getElementById('icon3').onclick = function() {
 document.getElementById('icon4').onclick = function() {
   window.location.href = 'https://www.facebook.com/';
 };
+
+///////////////////////////////////////////////////////////////////////////////
+//////// Q-Ride 'Ride Now' Map feature
+///////////////////////////////////////////////////////////////////////////////
+
+function initRideNowMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {
+      lat: -34.397,
+      lng: 150.644
+    },
+    zoom: 20
+  });
+  var infoWindow = new google.maps.InfoWindow({
+    map: map
+  });
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+      //Gets the current position of the user
+    //  var currPos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      //Q-Ride providers in Queensland dataset - file format: CSV
+    //  var data = httpGet();
+      //Parses CSV file, and returns list of each provider's position
+    //  var providerCoordinates = parseData(data);
+      //lastly, finds the closest QRide Provider
+  //    var shortestPath = findShortestPath(currPos, providerCoordinates);
+
+  //    infoWindow.setPosition(shortestPath);
+  //    infoWindow.setContent('This is your closest QRide Provider.');
+  //    map.setCenter(shortestPath);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+}

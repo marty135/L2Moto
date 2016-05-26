@@ -92,9 +92,12 @@
 
           </div>
 
+            <div id="secondmap">
             <!--Add second map, for seeing the clicked locations -->
+              <p>Seeing blank? Your location settings are currently turned off</p>
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initRideNowMap" async defer></script>
+          </div>
 
-            <p>Seeing blank? Your location settings are currently turned off</p>
             </div>
             <div id="rankings">
 
