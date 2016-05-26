@@ -188,7 +188,7 @@ document.getElementById('icon4').onclick = function() {
 ///////////////////////////////////////////////////////////////////////////////
 
 function initRideNowMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById('secondmap'), {
     center: {
       lat: -34.397,
       lng: 150.644
