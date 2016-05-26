@@ -40,13 +40,10 @@
               <h4 class="modal-title"> Web feature </h4>
             </div>
             <div class="modal-body">
-
               <div id="secondmap">
               <!--Add second map, for seeing the clicked locations -->
                 <p>Seeing blank? Your location settings are currently turned off</p>
-              <script src="https://maps.googleapis.com/maps/api/js?callback=initRideNowMap" async defer></script>
-            </div>
-
+              </div>
 
               <div id="rating-web-feature">
               <?php
