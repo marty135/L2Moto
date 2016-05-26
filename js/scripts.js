@@ -204,17 +204,17 @@ function initRideNowMap() {
     navigator.geolocation.getCurrentPosition(function(position) {
 
       //Gets the current position of the user
-    //  var currPos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      var currPos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       //Q-Ride providers in Queensland dataset - file format: CSV
-    //  var data = httpGet();
+      var data = httpGet();
       //Parses CSV file, and returns list of each provider's position
-    //  var providerCoordinates = parseData(data);
+      var providerCoordinates = parseData(data);
       //lastly, finds the closest QRide Provider
-  //    var shortestPath = findShortestPath(currPos, providerCoordinates);
+      var shortestPath = findShortestPath(currPos, providerCoordinates);
 
-  //    infoWindow.setPosition(shortestPath);
-  //    infoWindow.setContent('This is your closest QRide Provider.');
-  //    map.setCenter(shortestPath);
+     infoWindow.setPosition(shortestPath);
+      infoWindow.setContent('This is your closest QRide Provider.');
+      map.setCenter(shortestPath);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
