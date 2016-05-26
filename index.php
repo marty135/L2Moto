@@ -41,6 +41,13 @@
             </div>
             <div class="modal-body">
 
+              <div id="secondmap">
+              <!--Add second map, for seeing the clicked locations -->
+                <p>Seeing blank? Your location settings are currently turned off</p>
+              <script src="https://maps.googleapis.com/maps/api/js?callback=initRideNowMap" async defer></script>
+            </div>
+
+
               <div id="rating-web-feature">
               <?php
                 $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
@@ -90,12 +97,6 @@
 
             ?>
 
-          </div>
-
-            <div id="secondmap">
-            <!--Add second map, for seeing the clicked locations -->
-              <p>Seeing blank? Your location settings are currently turned off</p>
-            <script src="https://maps.googleapis.com/maps/api/js?callback=initRideNowMap" async defer></script>
           </div>
 
             </div>
