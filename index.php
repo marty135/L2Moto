@@ -74,18 +74,18 @@
               $searchResult = file_get_contents($url);
               //parse output to get their rating
               $json_output = json_decode($searchResult, false);
-              array_push($provider_ratings, $json_output->results[0]->rating);
+              array_push($provider_ratings, urldecode($provider_name)." ".$json_output->results[0]->rating);
             }
 
 
-             //urldecode($provider_name)." ".
+
              //check to see if there is a rating associated with the provider name, if there is then
              //it will be displayed.
-             //foreach($provider_ratings as &$rating) {
-             // if (preg_match('/[A-Za-z]/', $rating) && preg_match('/[0-9]/', $rating)) {
-             //      echo "<ul>"." ".$rating."</ul>";
-             //  }
-             //  }
+             foreach($provider_ratings as &$rating) {
+              if (preg_match('/[A-Za-z]/', $rating) && preg_match('/[0-9]/', $rating)) {
+                  echo "<ul>"." ".$rating."</ul>";
+              }
+              }
 
             ?>
 
