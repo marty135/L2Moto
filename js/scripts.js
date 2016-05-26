@@ -8,19 +8,8 @@ function initMap() {
     },
     zoom: 20
   });
-
-  var map2 = new google.maps.Map(document.getElementById('secondmap'), {
-    center: {
-      lat: -34.397,
-      lng: 150.644
-    },
-    zoom: 20
-  });
-
-
   var infoWindow = new google.maps.InfoWindow({
     map: map
-    map2: map2
   });
 
   // Try HTML5 geolocation.
@@ -41,12 +30,10 @@ function initMap() {
       map.setCenter(shortestPath);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
-        handleLocationError(true, infoWindow, map2.getCenter());
     });
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
-      handleLocationError(false, infoWindow, map2.getCenter());
   }
 }
 
@@ -195,3 +182,31 @@ document.getElementById('icon3').onclick = function() {
 document.getElementById('icon4').onclick = function() {
   window.location.href = 'https://www.facebook.com/';
 };
+
+
+
+$('.secondmap').each(function (index, Element) {
+    var coords = $(Element).text().split(",");
+    if (coords.length != 3) {
+        $(this).display = "none";
+        return;
+    }
+    var latlng = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
+    var myOptions = {
+        zoom: parseFloat(coords[2]),
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: false,
+        mapTypeControl: true,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL
+        }
+    };
+    var map = new google.maps.Map(Element, myOptions);
+
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map
+    });
+});
