@@ -105,12 +105,19 @@
 
               $name = urldecode($provider_names[$i]);
               $rating = $provider_ratings[$i];
+              mysql_select_db("l2db", $conn);
+              $result = mysql_query(
+              "SELECT * FROM qride WHERE name='$name' LIMIT 1");
+
+              if(mysql_fetch_array($result) != false) {
+
               if($name!=null) {
 
               $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
               $stmt->bind_param("sd", $name, $rating);
               $stmt->execute();
               $stmt->close();
+              }
               }
              }
 
