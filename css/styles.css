@@ -279,9 +279,10 @@ span {
 
 .first-column {
   width: 40%;
+  background-image: url('../images/harley.jpg');
   float: left;
   height: 800px;
-  background-color: grey;
+
 }
 
 .second-column {
