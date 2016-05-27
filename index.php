@@ -102,13 +102,16 @@
              }
 
            for($i = 1; $i < count($provider_names); $i++) {
+
               $name = urldecode($provider_names[$i]);
               $rating = $provider_ratings[$i];
+              if($name!=null) {
+
               $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
               $stmt->bind_param("sd", $name, $rating);
               $stmt->execute();
               $stmt->close();
-
+              }
              }
 
              	mysqli_close($conn);
