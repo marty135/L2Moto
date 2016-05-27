@@ -100,14 +100,16 @@
              if (!$conn) {
                die('Could not connect: ' . mysql_error());
              }
-            for($i = 1; $i < count($provider_names); $i++) {
+
+           for($i = 1; $i < count($provider_names); $i++) {
               $name = urldecode($provider_name[$i]);
+              echo $name;
               $rating = $provider_ratings[$i];
               $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
               $stmt->bind_param("sd", $name, $rating);
               $stmt->execute();
               $stmt->close();
-              echo "New record created successfully";
+
              }
 
              	mysqli_close($conn);
