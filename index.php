@@ -74,7 +74,7 @@
           }
 
           echo print_r($provider_names);
-          
+
             //encode provider names
             foreach ($provider_names as &$value) {
                 $value = urlencode($value);
@@ -103,7 +103,7 @@
                die('Could not connect: ' . mysql_error());
              }
 
-           for($i = 1; $i < count($provider_names); $i++) {
+           for($i = 0; $i < count($provider_names); $i++) {
 
               $name = urldecode($provider_names[$i]);
               $rating = $provider_ratings[$i];
