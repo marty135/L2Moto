@@ -102,8 +102,7 @@
              }
 
            for($i = 1; $i < count($provider_names); $i++) {
-              $name = urldecode($provider_name[$i]);
-              echo $name;
+              $name = urldecode($provider_names[$i]);
               $rating = $provider_ratings[$i];
               $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
               $stmt->bind_param("sd", $name, $rating);
