@@ -13,17 +13,6 @@ function initMap() {
   });
 
 
-  var map2 = new google.maps.Map(document.getElementById('secondmap'), {
-    center: {
-      lat: -34.397,
-      lng: 150.644
-    },
-    zoom: 20
-  });
-  var infoWindow = new google.maps.InfoWindow({
-    map2: map2
-  });
-
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -40,20 +29,12 @@ function initMap() {
       infoWindow.setPosition(shortestPath);
       infoWindow.setContent('This is your closest QRide Provider.');
       map.setCenter(shortestPath);
-
-      //second map
-      infoWindow.setPosition(currPos);
-      map.setCenter(currPos);
-      infoWindow.setContent("You are currently here")
-
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
-      handleLocationError(true, infoWindow, map2.getCenter());
     });
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
-    handleLocationError(false, infoWindow, map2.getCenter());
   }
 }
 
