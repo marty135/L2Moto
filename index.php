@@ -87,8 +87,28 @@
               $searchResult = file_get_contents($url);
               //parse output to get their rating
               $json_output = json_decode($searchResult, false);
-              array_push($provider_ratings, urldecode($provider_name)." ".$json_output->results[0]->rating);
+              array_push($provider_ratings, $json_output->results[0]->rating);
             }
+
+             //urldecode($provider_name)." ".
+
+             //create a list and then store for each Q-Ride Provider, a list of mappings for their
+             //properties to be added to the database.
+             include 'database_info.php';
+             // Create connection
+             $conn = new mysqli($servername, $username, $password, $dbname);
+
+            for($i = 1; $i < count($provider_names); $i++) {
+              $name = urldecode($provider_name[$i]);
+              $rating = $provider_ratings[$i];
+              $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
+              $stmt->bind_param("sss", $name, $rating);
+              $stmt->execute();
+              $stmt->close();
+
+             }
+
+             	mysqli_close($conn);
 
 
              //check to see if there is a rating associated with the provider name, if there is then
