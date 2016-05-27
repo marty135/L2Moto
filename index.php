@@ -94,7 +94,10 @@
 
              //create a list and then store for each Q-Ride Provider, a list of mappings for their
              //properties to be added to the database.
-             include 'database_info.php';
+             $servername = "173.194.231.173";
+             $username = "test";
+             $password = "infs3202";
+             $dbname = "l2db";
              // Create connection
              $conn = new mysqli($servername, $username, $password, $dbname);
              if (!$conn) {
