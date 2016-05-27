@@ -104,10 +104,10 @@
               $name = urldecode($provider_name[$i]);
               $rating = $provider_ratings[$i];
               $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
-              $stmt->bind_param("sss", $name, $rating);
+              $stmt->bind_param("sd", $name, $rating);
               $stmt->execute();
               $stmt->close();
-
+              echo "New record created successfully";
              }
 
              	mysqli_close($conn);
