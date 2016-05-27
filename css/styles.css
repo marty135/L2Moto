@@ -294,3 +294,6 @@ span {
  max-height: 800px;
  max-width: 800px;
 }
+.modal-dialog{
+  width: 800px;
+}
