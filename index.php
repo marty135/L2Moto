@@ -97,7 +97,10 @@
              include 'database_info.php';
              // Create connection
              $conn = new mysqli($servername, $username, $password, $dbname);
-
+             if (!$conn) {
+               die('Could not connect: ' . mysql_error());
+             }
+             echo 'Connected successfully';
         //    for($i = 1; $i < count($provider_names); $i++) {
               $name = urldecode($provider_name[$i]);
         //      $rating = $provider_ratings[$i];
