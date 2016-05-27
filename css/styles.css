@@ -278,14 +278,14 @@ span {
 }
 
 .first-column {
-  width: 40%;
+  width: 300px;
   float: left;
   height: 2000px;
   background-color: grey;
 }
 
 .second-column {
-  width: 40%;
+  width: 300px;
   float: right;
   height: 2000px;
   background-color: grey;
