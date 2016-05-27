@@ -40,10 +40,18 @@
               <h4 class="modal-title"> Web feature </h4>
             </div>
             <div class="modal-body">
-              <div id="secondmap">
-              <!--Add second map, for seeing the clicked locations -->
-                <p>Seeing blank? Your location settings are currently turned off</p>
+
+              <div class="first-column">
+                <!-- Your first column here -->
+
+                <div id="secondmap">
+                <!--Add second map, for seeing the clicked locations -->
+                  <p>Seeing blank? Your location settings are currently turned off</p>
+                </div>
+
               </div>
+              <div class="second-column">
+                <!-- Your second column here -->
 
               <div id="rating-web-feature">
               <?php
@@ -83,7 +91,6 @@
             }
 
 
-
              //check to see if there is a rating associated with the provider name, if there is then
              //it will be displayed.
              foreach($provider_ratings as &$rating) {
@@ -96,10 +103,9 @@
 
           </div>
 
+          </div>
             </div>
-            <div id="rankings">
 
-            </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>

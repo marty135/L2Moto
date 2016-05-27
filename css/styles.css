@@ -277,6 +277,15 @@ span {
   text-decoration: none;
 }
 
+.first-column {
+  width: 40%;
+  float: left;
+}
+
+.second-column {
+  width: 40%;
+  float: right;
+}
 .modal-body {
   background-color: grey;
 
