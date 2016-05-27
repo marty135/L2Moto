@@ -73,6 +73,8 @@
             fclose($handle);
           }
 
+          echo print_r($provider_names);
+          
             //encode provider names
             foreach ($provider_names as &$value) {
                 $value = urlencode($value);
@@ -116,7 +118,7 @@
               $stmt->bind_param("sd", $name, $rating);
               $stmt->execute();
               $stmt->close();
-            
+
               }
              }
 
