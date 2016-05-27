@@ -279,7 +279,6 @@ span {
 
 .first-column {
   width: 40%;
-  background-image: url('../images/harley.jpg');
   float: left;
   height: 800px;
 
@@ -288,13 +287,10 @@ span {
 .second-column {
   width: 40%;
   float: right;
-  height: 800px;
+  height: 500px;
   background-color: grey;
 }
-.modal-body {
- max-height: 800px;
- max-width: 800px;
-}
+
 .modal-dialog{
   width: 800px;
 }
