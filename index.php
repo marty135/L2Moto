@@ -103,17 +103,17 @@
            for($i = 1; $i < count($provider_names); $i++) {
               $name = urldecode($provider_names[$i]);
               $rating = $provider_ratings[$i-1];
-              mysql_select_db("l2db", $conn);
-              $result = mysql_query("SELECT * FROM qride WHERE name='$name' LIMIT 1");
+          //    mysql_select_db("l2db", $conn);
+        //      $result = mysql_query("SELECT * FROM qride WHERE name='$name' LIMIT 1");
               //checks to see if Q-Ride provider already exists in db
               //if it hasn't been added to the db, then it adds it.
-              if(mysql_fetch_array($result) == false) {
+      //        if(mysql_fetch_array($result) == false) {
                 if($name != null) {
                 $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
                 $stmt->bind_param("sd", $name, $rating);
                 $stmt->execute();
                 $stmt->close();
-                }
+      //          }
               }
              }
 
