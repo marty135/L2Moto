@@ -94,25 +94,21 @@
 
              //create a list and then store for each Q-Ride Provider, a list of mappings for their
              //properties to be added to the database.
-             $servername = "173.194.231.173";
-             $username = "test";
-             $password = "infs3202";
-             $dbname = "l2db";
+             include 'database_info.php';
              // Create connection
              $conn = new mysqli($servername, $username, $password, $dbname);
              if (!$conn) {
                die('Could not connect: ' . mysql_error());
              }
-             echo 'Connected successfully';
-        //    for($i = 1; $i < count($provider_names); $i++) {
+            for($i = 1; $i < count($provider_names); $i++) {
               $name = urldecode($provider_name[$i]);
-        //      $rating = $provider_ratings[$i];
-      //        $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
-        //      $stmt->bind_param("sss", $name, $rating);
-      //        $stmt->execute();
-        //      $stmt->close();
+              $rating = $provider_ratings[$i];
+              $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
+              $stmt->bind_param("sss", $name, $rating);
+              $stmt->execute();
+              $stmt->close();
 
-          //   }
+             }
 
              	mysqli_close($conn);
 
