@@ -297,3 +297,6 @@ span {
 .modal-dialog{
   width: 800px;
 }
+.modal-content{
+  width: 800px;
+}
