@@ -98,15 +98,15 @@
              // Create connection
              $conn = new mysqli($servername, $username, $password, $dbname);
 
-            for($i = 1; $i < count($provider_names); $i++) {
+        //    for($i = 1; $i < count($provider_names); $i++) {
               $name = urldecode($provider_name[$i]);
-              $rating = $provider_ratings[$i];
-              $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
-              $stmt->bind_param("sss", $name, $rating);
-              $stmt->execute();
-              $stmt->close();
+        //      $rating = $provider_ratings[$i];
+      //        $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
+        //      $stmt->bind_param("sss", $name, $rating);
+      //        $stmt->execute();
+        //      $stmt->close();
 
-             }
+          //   }
 
              	mysqli_close($conn);
 
