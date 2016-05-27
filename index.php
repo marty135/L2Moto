@@ -103,10 +103,10 @@
                die('Could not connect: ' . mysql_error());
              }
 
-           for($i = 0; $i < count($provider_names); $i++) {
+           for($i = 1; $i < count($provider_names); $i++) {
 
               $name = urldecode($provider_names[$i]);
-              $rating = $provider_ratings[$i];
+              $rating = $provider_ratings[$i-1];
               mysql_select_db("l2db", $conn);
               $result = mysql_query("SELECT * FROM qride WHERE name='$name' LIMIT 1");
 
