@@ -54,6 +54,7 @@
                 <!-- Your second column here -->
 
               <div id="rating-web-feature">
+
               <?php
                 $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
                 $provider_names = [];
@@ -73,8 +74,6 @@
             fclose($handle);
           }
 
-          echo print_r($provider_names);
-
             //encode provider names
             foreach ($provider_names as &$value) {
                 $value = urlencode($value);
@@ -92,44 +91,32 @@
               array_push($provider_ratings, $json_output->results[0]->rating);
             }
 
-             //urldecode($provider_name)." ".
-
              //create a list and then store for each Q-Ride Provider, a list of mappings for their
              //properties to be added to the database.
              include 'database_info.php';
-             // Create connection
+             // Create db connection
              $conn = new mysqli($servername, $username, $password, $dbname);
              if (!$conn) {
                die('Could not connect: ' . mysql_error());
              }
 
            for($i = 1; $i < count($provider_names); $i++) {
-
               $name = urldecode($provider_names[$i]);
               $rating = $provider_ratings[$i-1];
               mysql_select_db("l2db", $conn);
               $result = mysql_query("SELECT * FROM qride WHERE name='$name' LIMIT 1");
-
+              //checks to see if Q-Ride provider already exists in db
+              //if it hasn't been added to the db, then it adds it.
               if(mysql_fetch_array($result) == false && $name != null) {
-
               $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
               $stmt->bind_param("sd", $name, $rating);
               $stmt->execute();
               $stmt->close();
-
               }
              }
 
-             	mysqli_close($conn);
-
-
-             //check to see if there is a rating associated with the provider name, if there is then
-             //it will be displayed.
-             foreach($provider_ratings as &$rating) {
-              if (preg_match('/[A-Za-z]/', $rating) && preg_match('/[0-9]/', $rating)) {
-                  echo "<ul>"." ".$rating."</ul>";
-              }
-              }
+             //close the db connection.
+             mysqli_close($conn);
 
             ?>
 
