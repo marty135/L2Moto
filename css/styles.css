@@ -291,5 +291,6 @@ span {
   background-color: grey;
 }
 .modal-body {
-
+ max-height: 800px;
+ max-width: 800px;
 }
