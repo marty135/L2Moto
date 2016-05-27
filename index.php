@@ -110,13 +110,13 @@
 
               if(mysql_fetch_array($result) == false) {
 
-              if($name!=null) {
+
 
               $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
               $stmt->bind_param("sd", $name, $rating);
               $stmt->execute();
               $stmt->close();
-              }
+            
               }
              }
 
