@@ -280,11 +280,15 @@ span {
 .first-column {
   width: 40%;
   float: left;
+  height: 300px;
+  color: grey;
 }
 
 .second-column {
   width: 40%;
   float: right;
+  height: 300px;
+  color: grey;
 }
 .modal-body {
   background-color: grey;
