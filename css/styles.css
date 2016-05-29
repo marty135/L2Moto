@@ -11,11 +11,11 @@ hr {
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#CCC), to(#CCC), color-stop(50%, #333));
 }
 ul {
-    list-style: none; /* Remove list bullets */
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  /* Remove list bullets */
+  padding: 0;
+  margin: 0;
 }
-
 span {
   display: inline-block;
   vertical-align: middle;
@@ -86,7 +86,6 @@ span {
   font-weight: 300;
   color: black;
 }
-
 #map {
   position: relative;
   bottom: 20px;
@@ -276,24 +275,20 @@ span {
   border-left: 1px solid #CCCCCC;
   text-decoration: none;
 }
-
 .first-column {
   width: 40%;
   float: left;
   height: 500px;
-
 }
-
 .second-column {
   width: 40%;
   float: right;
   height: 500px;
   background-color: grey;
 }
-
-.modal-dialog{
+.modal-dialog {
   width: 800px;
 }
-.modal-content{
+.modal-content {
   width: 800px;
 }
