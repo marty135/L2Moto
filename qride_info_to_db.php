@@ -72,7 +72,7 @@ $rating = $provider_ratings[$i-1];
   $stmt->execute();
   $stmt->close();
 }
-}
+
 //close the db connection.
 mysqli_close($conn);
 ?>
