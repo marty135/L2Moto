@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 
 /* Select queries return a resultset */
 if ($result = $mysqli->query($sql)) {
-    echo("Select returned %d rows.\n", $result->num_rows);
+    echo "Select returned %d rows.\n" . $result->num_rows);
 
     /* free result set */
     $result->close();
