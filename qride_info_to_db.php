@@ -46,13 +46,6 @@ $rating = $provider_ratings[$i-1];
     if (strcmp((string)$name, "Australian Motorcycle Academy") == 0) {
       $ch = curl_init("https://www.facebook.com/amaqride/reviews?ref=page_internal");
 
-      else if (strcmp((string)$name, "Cycle Right") == 0) {
-        $ch = curl_init("https://www.facebook.com/cycleright.cc/reviews?ref=page_internal");
-      }
-
-      else if (strcmp((string)$name, "DARTS Driver and Rider School") == 0) {
-        $ch = curl_init("https://www.facebook.com/DARTS-Driver-and-Rider-Training-School-144166892293553/reviews?ref=page_internal");
-      }
       curl_setopt( $ch, CURLOPT_POST, false );
       curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
       curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.7.12) Gecko/20050915 Firefox/1.0.7");
@@ -63,8 +56,8 @@ $rating = $provider_ratings[$i-1];
       if (strpos($data, '_3-ma _2bne') && strpos($data2, '_3-ma _2bne') && strpos($data3, '_3-ma _2bne')) {
         $source1 = substr((string)$data, strpos((string)$data, '_3-ma _2bne') + 13, 3);
         $rating  = ($source1 + $rating)/2;
+        }
       }
-    }
 
   $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
   $stmt->bind_param("sd", $name, $rating);
