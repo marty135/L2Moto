@@ -52,6 +52,7 @@
               </div>
               <div class="second-column">
                 <!-- Your second column here -->
+                <?php include("populate_feature_list.php"); ?>
 
              <div id="rating-web-feature">
 
