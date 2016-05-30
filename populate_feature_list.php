@@ -10,7 +10,11 @@ if (mysqli_connect_errno())
 
 // Perform queries
 if ($result = mysqli_query($con,"SELECT name, rating FROM qride ORDER BY rating DESC LIMIT 5")) {
-print_r("Select returned %d rows.\n", $result->fetch_array);
+$top_five = mysql_fetch_array($result);
+
+foreach ($top_five as &$value) {
+    print_r($value);
+}
  /* free result set */
  $result->close();
 }
