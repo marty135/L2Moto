@@ -43,18 +43,19 @@
 
               <div class="first-column">
                 <!-- Your first column here -->
-                
-              <?php include("populate_feature_list.php"); ?>
+
+
 
                 <div id="secondmap">
                 <!--Add second map, for seeing the clicked locations -->
-                  <p>Seeing blank? Your location settings are currently turned off</p>
+
                 </div>
 
               </div>
               <div class="second-column">
                 <!-- Your second column here -->
-
+                <p> Queensland Top 5 Providers </p>
+              <?php include("populate_feature_list.php"); ?>
 
              <div id="rating-web-feature">
 
