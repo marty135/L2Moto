@@ -12,7 +12,7 @@ if (mysqli_connect_errno())
 if ($result = mysqli_query($con,"SELECT name, rating FROM qride ORDER BY rating DESC LIMIT 5")) {
 
   while($row = $result->fetch_assoc()) {
-     echo "id: " . $row["name"]. " - Name: " . $row["rating"]. "<br>";
+     echo $row["name"] . $row["rating"]. "<br>";
  }
  /* free result set */
  $result->close();
