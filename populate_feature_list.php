@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 }
 
 //Query to find top 5 q-ride providers in Queensland.
-$sql = "SELECT name, rating FROM table ORDER BY rating DESC LIMIT 5;";
+$sql = "SELECT name, rating FROM table ORDER BY rating DESC LIMIT 5";
 
 $result = $conn->query($sql);
 
