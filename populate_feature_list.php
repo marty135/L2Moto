@@ -14,7 +14,7 @@ if (!$conn) {
 $query = mysql_query("SELECT * FROM qride ORDER BY rating DESC LIMIT 5");
 
 while ($row = mysql_fetch_array($sql)){
-echo $row;
+echo "Returned from DB" + $row;
 }
 
 //close the db connection.
