@@ -13,13 +13,13 @@ if ($result = mysqli_query($con,"SELECT name, rating FROM qride ORDER BY rating 
 
   while($row = $result->fetch_assoc()) {
      echo $row["name"] ."  " . $row["rating"]. "<br>";
+     echo "<br>"
  }
  /* free result set */
  $result->close();
 
 } else {
  echo "0 results";
-
  }
 
 mysqli_close($con);

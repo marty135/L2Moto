@@ -54,7 +54,7 @@
               </div>
               <div class="second-column">
                 <!-- Your second column here -->
-                <p> Queensland Top 5 Providers </p>
+                <p> Queensland's Top 5 Providers </p>
               <?php include("populate_feature_list.php"); ?>
 
              <div id="rating-web-feature">
