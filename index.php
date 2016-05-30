@@ -53,7 +53,8 @@
               <div class="second-column">
                 <!-- Your second column here -->
                 <?php include("populate_feature_list.php"); ?>
-
+                <?php echo "Hello test"; ?>
+                
              <div id="rating-web-feature">
 
                <!-- Here make calls to the DB and display the data visually. -->
