@@ -43,7 +43,7 @@
 
               <div class="first-column">
                 <!-- Your first column here -->
-                <?php echo "Hello test"; ?>
+                
               <?php include("populate_feature_list.php"); ?>
 
                 <div id="secondmap">

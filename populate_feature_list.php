@@ -10,6 +10,7 @@ if (mysqli_connect_errno())
 
 // Perform queries
 if ($result = mysqli_query($con,"SELECT name, rating FROM table ORDER BY rating DESC LIMIT 5")) {
+  printf("test");
 printf("Select returned %d rows.\n", $result->num_rows);
  /* free result set */
  $result->close();
