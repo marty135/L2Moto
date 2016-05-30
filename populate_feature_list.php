@@ -1,24 +1,26 @@
 <?php
-//create a list and then store for each Q-Ride Provider, a list of mappings for their
-//properties to be added to the database.
 include 'database_info.php';
 
-// Create db connection
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-if (!$conn) {
- die('Could not connect: ' . mysql_error());
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
 //Query to find top 5 q-ride providers in Queensland.
-$result = mysql_query($conn,"SELECT name, rating FROM qride ORDER BY rating DESC LIMIT 5;");
+$sql = mysql_query($conn,"SELECT name, rating FROM qride ORDER BY rating DESC LIMIT 5;");
 
+$result = $conn->query($sql);
 
+if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Provider: " . $row["name"]. " - Rating: " . $row["rating"]. "<br>";
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
     }
-} 
-
+} else {
+    echo "0 results";
+}
 $conn->close();
 
 ?>
