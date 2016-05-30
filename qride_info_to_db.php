@@ -42,22 +42,8 @@ $name = urldecode($provider_names[$i]);
 $rating = $provider_ratings[$i-1];
   if($name != null) {
 
-    // segment by James
-    if (strcmp((string)$name, "Australian Motorcycle Academy") == 0) {
-      $ch = curl_init("https://www.facebook.com/amaqride/reviews?ref=page_internal");
-      curl_setopt( $ch, CURLOPT_POST, false );
-      curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
-      curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.7.12) Gecko/20050915 Firefox/1.0.7");
-      curl_setopt( $ch, CURLOPT_HEADER, false );
-      curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-      $data = curl_exec( $ch );
+    $rating  = ($rating + "4.8")/2;
 
-      if (strpos($data, '_3-ma _2bne')) {
-        $source1 = substr((string)$data, strpos((string)$data, '_3-ma _2bne') + 13, 3);
-        $rating  = ($source1 + $rating)/2;
-      }
-
-    }
 
 
 
