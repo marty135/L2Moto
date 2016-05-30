@@ -46,7 +46,7 @@ $rating = $provider_ratings[$i-1];
     if (strcmp((string)$name, "Australian Motorcycle Academy") == 0) {
       $ch = curl_init("https://www.facebook.com/amaqride/reviews?ref=page_internal");
 
-      else if (strcmp((string)$name, "Cycle Right") == 0) {
+    } else if (strcmp((string)$name, "Cycle Right") == 0) {
         $ch = curl_init("https://www.facebook.com/cycleright.cc/reviews?ref=page_internal");
       }
 
