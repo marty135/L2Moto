@@ -10,14 +10,19 @@ if (!$conn) {
  die('Could not connect: ' . mysql_error());
 }
 
-//query
+//Query to find top 5 q-ride providers in Queensland.
 $query = mysql_query("SELECT name, rating FROM qride ORDER BY rating DESC LIMIT 5");
+$result = $conn->query($query);
 
-while ($row = mysql_fetch_array($query)){
-echo "<option value=\"owner1\">" . $row['name'] . $row['rating'] . "</option>";
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Provider: " . $row["name"]. " - Rating: " . $row["rating"]. "<br>";
+    }
+} else {
+    echo "0 results";
 }
 
-//close the db connection.
-mysqli_close($conn);
+$conn->close();
 
 ?>
