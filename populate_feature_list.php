@@ -11,8 +11,7 @@ if (!$conn) {
 }
 
 //query
-//ORDER BY rating DESC LIMIT 5
-$query = mysql_query("SELECT name, rating FROM qride");
+$query = mysql_query("SELECT name, rating FROM qride ORDER BY rating DESC LIMIT 5");
 
 while ($row = mysql_fetch_array($query)){
 echo "<option value=\"owner1\">" . $row['name'] . $row['rating'] . "</option>";

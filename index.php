@@ -44,7 +44,9 @@
               <div class="first-column">
                 <!-- Your first column here -->
                 <?php echo "Hello test"; ?>
+                <select name="owner">
                 <?php include("populate_feature_list.php"); ?>
+                </select>
                 <div id="secondmap">
                 <!--Add second map, for seeing the clicked locations -->
                   <p>Seeing blank? Your location settings are currently turned off</p>
