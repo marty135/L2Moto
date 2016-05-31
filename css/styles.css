@@ -235,7 +235,7 @@ span {
   float: right;
 }
 #browsebutton {
-
+  margin-left: 10px;
   background-color:  #99ddff;
   border: 0;
 }
