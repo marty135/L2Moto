@@ -51,13 +51,6 @@ $data = file_get_contents($url, false, $context);
 }
 
 
-for ($k = 0; $k < count($scrape_Titles); $k++) {
-  echo $scrape_Titles[$k];
-  echo ", ";
-  echo $scrape_Ratings[$k];
-  echo "...";
-}
-
 
 
   $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
@@ -106,8 +99,8 @@ $rating = $provider_ratings[$i-1];
     if (in_array($name, $scrape_Titles)) {
       $key = array_search($name, $scrape_Titles);
 
-      if ($rating === NULL) {
-        $rating = ($scrape_Ratings[$key]);
+      if ($rating == null) {
+        $rating = $scrape_Ratings[$key];
       } else {
         $rating = ($rating + $scrape_Ratings[$key])/2;
       }
