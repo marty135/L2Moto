@@ -19,7 +19,7 @@ function initMap() {
     },
     zoom: 20
   });
-  var infoWindow = new google.maps.InfoWindow({
+  var infoWindowTwo = new google.maps.InfoWindow({
     second_map: second_map
   });
 
@@ -41,8 +41,8 @@ function initMap() {
       infoWindow.setContent('This is your closest QRide Provider.');
       map.setCenter(shortestPath);
 
-      infoWindow.setPosition(currPos);
-      infoWindow.setContent('You are currenlty here.');
+      infoWindowTwo.setPosition(currPos);
+      infoWindowTwo.setContent('You are currenlty here.');
       map.setCenter(currPos);
 
     }, function() {
