@@ -240,8 +240,9 @@ span {
   color: black;
   text-decoration: none;
   opacity: 0.55;
+  background-color:  #99ddff;
+  border: 0;
 }
-
 .hwaccel {
   -webkit-transform: translateZ(0);
 }
