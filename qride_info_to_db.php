@@ -106,7 +106,7 @@ $rating = $provider_ratings[$i-1];
     if (in_array($name, $scrape_Titles)) {
       $key = array_search($name, $scrape_Titles);
 
-      if ($rating < 1) {
+      if ($rating === NULL) {
         $rating = ($scrape_Ratings[$key]);
       } else {
         $rating = ($rating + $scrape_Ratings[$key])/2;
