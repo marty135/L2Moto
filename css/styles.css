@@ -100,6 +100,23 @@ span {
   background-color: #CCC;
   border-radius: 10px;
 }
+
+#mapbox {
+
+  position: relative;
+  bottom: 20px;
+  top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-style: solid;
+  border-width: 5px;
+  height: 350px;
+  text-align: center;
+  background-color: #CCC;
+  border-radius: 10px;
+  
+}
 #missionpiccontainer {
   padding-top: 30px;
 }

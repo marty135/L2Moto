@@ -55,7 +55,7 @@
                                zoom: 4
                            };
                            map = new google.maps.Map(document.getElementById('mapbox'), mapOptions);
-                        
+
                        });
                    </script>
 
