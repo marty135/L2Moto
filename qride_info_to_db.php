@@ -91,11 +91,15 @@ $name = urldecode($provider_names[$i]);
 $rating = $provider_ratings[$i-1];
   if($name != null) {
 
-  $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
-  $stmt->bind_param("sd", $name, $rating);
-  $stmt->execute();
-  $stmt->close();
-}
+    if (in_array($name, $scrape_Titles)) {
+      $key = array_search($name, $scrape_Titles);
+      $rating = ($rating + $scrape_Ratings[$key])/2;
+    }
+    $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
+    $stmt->bind_param("sd", $name, $rating);
+    $stmt->execute();
+    $stmt->close();
+  }
 }
 //close the db connection.
 mysqli_close($conn);
