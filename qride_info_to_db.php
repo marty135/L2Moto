@@ -2,8 +2,11 @@
 
  $scrape_URLS = array(
     "https://www.facebook.com/amaqride/reviews?ref=page_internal",
-    "https://www.facebook.com/cycleright.cc/reviews?ref=page_internal",
-    "https://www.facebook.com/DARTS-Driver-and-Rider-Training-School-144166892293553/reviews?ref=page_internal"
+    "https://www.facebook.com/CycleRightMotorcyclingTrainingAcademy/reviews?ref=page_internal",
+    "https://www.facebook.com/DARTS-Driver-and-Rider-Training-School-144166892293553/reviews?ref=page_internal",
+    "https://www.facebook.com/bikesmarttraining/reviews",
+    "https://www.facebook.com/Bundaberg-Motorcycle-Training-526052524109891/reviews?ref=page_internal",
+    "https://www.facebook.com/ianwatsonsdrivingschool/reviews/"
     );
 
 $scrape_Ratings = [];
@@ -32,7 +35,16 @@ $data = file_get_contents($url, false, $context);
       array_push($scrape_Titles, "Cycle Right");
       array_push($scrape_Ratings, $source1);
     } else if ($i == 2) {
-      array_push($scrape_Titles, "DARTS Driver and Rid");
+      array_push($scrape_Titles, "DARTS Driver and Rider Training School");
+      array_push($scrape_Ratings, $source1);
+    } else if ($i == 3) {
+      array_push($scrape_Titles, "Bike Smart Motocycle Training");
+      array_push($scrape_Ratings, $source1);
+    } else if ($i == 4) {
+      array_push($scrape_Titles, "Bundaberg Motorcycle Training");
+      array_push($scrape_Ratings, $source1);
+    } else if ($i == 5) {
+      array_push($scrape_Titles, "Ian Watson's Driver Training Centre");
       array_push($scrape_Ratings, $source1);
     }
   }
