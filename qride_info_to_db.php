@@ -26,7 +26,7 @@ $data = file_get_contents($url, false, $context);
     $source1 = substr((string)$data, strpos((string)$data, '_3-ma _2bne') + 13, 3);
 
     if ($i == 0) {
-      array_push($scrape_Titles, "Australian Motorcycl");
+      array_push($scrape_Titles, "Australian Motorcycle Academy");
       array_push($scrape_Ratings, $source1);
     } else if ($i == 1) {
       array_push($scrape_Titles, "Cycle Right");
