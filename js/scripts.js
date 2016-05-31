@@ -41,6 +41,7 @@ function initMap() {
       infoWindow.setContent('This is your closest QRide Provider.');
       map.setCenter(shortestPath);
 
+      
       infoWindowTwo.setPosition(currPos);
       infoWindowTwo.setContent('You are currenlty here.');
       map.setCenter(currPos);
