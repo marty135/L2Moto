@@ -40,6 +40,11 @@ function initMap() {
       infoWindow.setPosition(shortestPath);
       infoWindow.setContent('This is your closest QRide Provider.');
       map.setCenter(shortestPath);
+
+      infoWindow.setPosition(currPos);
+      infoWindow.setContent('You are currenlty here.');
+      map.setCenter(currPos);
+
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });

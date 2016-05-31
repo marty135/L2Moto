@@ -43,7 +43,7 @@
 
               <div class="first-column">
                 <!-- Your first column here -->
-
+                
                 <div id="secondmap">
                 <!--Add second map, for seeing the clicked locations -->
                 </div>
