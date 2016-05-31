@@ -43,6 +43,23 @@
 
               <div class="first-column">
                 <!-- Your first column here -->
+                <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+                   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                   <script type="text/javascript">
+                       document.addEventListener("DOMContentLoaded", function () {
+                           var mapOptions = {
+                               center: {
+                                   lat: -27.5,
+                                   lng: 153
+                               },
+                               zoom: 4
+                           };
+                           map = new google.maps.Map(document.getElementById('mapbox'), mapOptions);
+                        
+                       });
+                   </script>
+
+                   <div id="mapbox" style="width: 800px; height: 600px;"></div>
 
                 <div id="secondmap">
                 <!--Add second map, for seeing the clicked locations -->
