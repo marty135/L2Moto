@@ -13,7 +13,7 @@
   <link href="images/Facebook.png" type="image/png" rel="stylesheet" />
   <link href="images/Instagram.png" type="image/css" rel="stylesheet" />
   <link href="images/LinkedIn.png" type="image/css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="css/magic.css"></link>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -28,7 +28,51 @@
     <div id="tabcontainer">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <button type="button" class="buttonimposter" data-toggle="modal" data-target="#myModalG">Browse</button>
       <button type="button" class="buttonimposter" data-toggle="modal" data-target="#myModal">Ride Now</button>
+
+      <!-- ModalG -->
+          <div class="modal fade" id="myModalG" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                  <h4 class="modal-title">Browse All QRide Providers</h4>
+
+                </div>
+                <div class="modal-body">
+    			  <div class="modal-upper">
+    				<!-- main provider info section -->
+    				<div  id="providerInfoContainer">
+    				  <div class="providerInfoTextColumn">
+    					<p class="modal-providerName" id="modal-providerName"></p>
+    					<p class="modal-providerInfo" id="modal-providerAddress"></p>
+    					<p class="modal-providerInfo" id="modal-providerSuburb"></p>
+    					<p class="modal-providerInfo" id="modal-providerPhone"></p>
+    					<p class="modal-providerInfo" id="modal-providerEmail"></p>
+    					<p class="modal-providerInfo" id="modal-providerWebsite"></p>
+    				  </div>
+    				  <div class="providerInfoImageColumn">
+    				    <div id="providerInfoImage">
+    					</div>
+    				  </div>
+    				</div>
+    			  </div>
+    			  <div class="modal-lower">
+    				<!-- provider nav buttons -->
+    				<button type="button" id="btn_previousProvider" class="btn_providerNav">&#60</button>
+    				<button type="button" id="btn_nextProvider" class="btn_providerNav">&#62</button>
+    			  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -43,7 +87,7 @@
 
               <div class="first-column">
                 <!-- Your first column here -->
-                
+
                 <div id="secondmap">
                 <!--Add second map, for seeing the clicked locations -->
                 </div>
@@ -121,6 +165,7 @@
   </section>
 
   <script src="js/scripts.js"></script>
+  <script src="js/browse.js"></script>
 </body>
 
 </html>
