@@ -44,23 +44,20 @@
               <div class="first-column">
                 <!-- Your first column here -->
 
-
-
                 <div id="secondmap">
                 <!--Add second map, for seeing the clicked locations -->
-
                 </div>
 
               </div>
               <div class="second-column">
                 <!-- Your second column here -->
                 <p> Queensland's Top 5 Providers </p>
+                <br> </br>
+                <br> </br>
               <?php include("populate_feature_list.php"); ?>
 
              <div id="rating-web-feature">
-
                <!-- Here make calls to the DB and display the data visually. -->
-
              </div>
 
           </div>
