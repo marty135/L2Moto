@@ -22,6 +22,7 @@ for ($i = 0; $i < count($scrape_URLS); $i++) {
               "User-Agent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.102011-10-16 20:23:10\r\n" // i.e. An iPad
   )
 );
+
 $context = stream_context_create($options);
 $data = file_get_contents($url, false, $context);
 
@@ -49,8 +50,6 @@ $data = file_get_contents($url, false, $context);
     }
   }
 }
-
-
 
 
   $providers = 'https://data.qld.gov.au/dataset/9b4990ba-c083-40bd-a52b-c59d8dd2e793/resource/0647759d-9f68-44f9-bd7e-eb96d37d11e4/download/20160323qrideprovider.csv';
@@ -133,6 +132,6 @@ $rating = $provider_ratings[$i-1];
 
   }
 }
-//close the db connection.
+//Close the db connection.
 mysqli_close($conn);
 ?>

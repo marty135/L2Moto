@@ -190,8 +190,6 @@ function httpGet() {
 }
 
 
-
-
 // Adding onclick functions to social media icons - links to websites
 document.getElementById('icon1').onclick = function() {
   window.location.href = 'https://twitter.com/?lang=en';

@@ -14,11 +14,10 @@
   <link href="images/Instagram.png" type="image/css" rel="stylesheet" />
   <link href="images/LinkedIn.png" type="image/css" rel="stylesheet" />
   <link rel="stylesheet" href="css/magic.css"></link>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q&libraries=places"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPQhe1MxS69bPLryapwhD6f-rF1TlJR5Q&libraries=places,geometry"></script>
 </head>
 
 <body>
@@ -99,18 +98,15 @@
                 <br> </br>
                 <br> </br>
               <?php include("populate_feature_list.php"); ?>
-
              <div id="rating-web-feature">
                <!-- Here make calls to the DB and display the data visually. -->
              </div>
-
           </div>
           <!--  </div> -->
             <div class="modal-footer">
             <!--  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
             </div>
           </div>
-
         </div>
       </div>
 
