@@ -2,8 +2,8 @@
 
 
 $scrape_URLS = array(
-//    "https://www.facebook.com/amaqride/reviews?ref=page_internal",
-//    "https://www.facebook.com/cycleright.cc/reviews?ref=page_internal",
+    "https://www.facebook.com/amaqride/reviews?ref=page_internal",
+    "https://www.facebook.com/cycleright.cc/reviews?ref=page_internal",
     "https://www.facebook.com/DARTS-Driver-and-Rider-Training-School-144166892293553/reviews?ref=page_internal"
     );
 
@@ -14,7 +14,7 @@ for ($i = 0; $i < count($scrape_URLS); $i++) {
   $ch = curl_init($scrape_URLS[$i]);
   curl_setopt( $ch, CURLOPT_POST, false );
   curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
-//  curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.7.12) Gecko/20050915 Firefox/1.0.7");
+  curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.7.12) Gecko/20050915 Firefox/1.0.7");
   curl_setopt( $ch, CURLOPT_HEADER, false );
   curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
   $data = curl_exec( $ch );
