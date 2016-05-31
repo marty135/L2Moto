@@ -28,7 +28,7 @@
     <div id="tabcontainer">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <button type="button" class="buttonimposter" data-toggle="modal" data-target="#myModalG">Browse</button>
+      <button id="browsebutton" type="button" class="buttonimposter" data-toggle="modal" data-target="#myModalG">Browse</button>
       <button type="button" class="buttonimposter" data-toggle="modal" data-target="#myModal">Ride Now</button>
 
       <!-- ModalG -->
