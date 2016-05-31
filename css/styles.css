@@ -235,7 +235,7 @@ span {
   float: right;
 }
 #browsebutton {
-  margin-left: 10px;
+
   background-color:  #99ddff;
   border: 0;
 }
@@ -314,6 +314,7 @@ span {
   border-bottom: 1px solid #333333;
   border-left: 1px solid #CCCCCC;
   text-decoration: none;
+  margin-right: 15px;
 }
 .first-column {
   width: 40%;
