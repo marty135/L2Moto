@@ -107,10 +107,31 @@ $rating = $provider_ratings[$i-1];
       $key = array_search($name, $scrape_Titles);
       $rating = ($rating + $scrape_Ratings[$key])/2;
     }
-    $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
-    $stmt->bind_param("sd", $name, $rating);
-    $stmt->execute();
-    $stmt->close();
+
+    $tableNames = mysql_query("SELECT name FROM qride");
+    $storeTableNames = Array();
+    while ($row = mysql_fetch_array($tableNames, MYSQL_ASSOC)) {
+      $storeTableNames[] = $row['name'];
+    }
+
+    if (in_array($name, $storeTableNames)) {
+      $stmt = $conn->prepare("DELETE FROM qride WHERE name=$name");
+      $stmt->bind_param("sd", $name, $rating);
+      $stmt->execute();
+      $stmt->close();
+
+      $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
+      $stmt->bind_param("sd", $name, $rating);
+      $stmt->execute();
+      $stmt->close();
+
+    } else {
+      $stmt = $conn->prepare("INSERT INTO qride(name, rating) VALUES(?, ?)");
+      $stmt->bind_param("sd", $name, $rating);
+      $stmt->execute();
+      $stmt->close();
+    }
+
   }
 }
 //close the db connection.
