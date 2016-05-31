@@ -12,6 +12,17 @@ function initMap() {
     map: map
   });
 
+  var second_map = new google.maps.Map(document.getElementById('secondmap'), {
+    center: {
+      lat: -34.397,
+      lng: 150.644
+    },
+    zoom: 20
+  });
+  var infoWindow = new google.maps.InfoWindow({
+    second_map: second_map
+  });
+
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {

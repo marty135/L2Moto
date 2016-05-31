@@ -101,7 +101,7 @@ span {
   border-radius: 10px;
 }
 
-#mapbox {
+#secondmap {
 
   position: relative;
   bottom: 20px;
@@ -115,7 +115,7 @@ span {
   text-align: center;
   background-color: #CCC;
   border-radius: 10px;
-  
+
 }
 #missionpiccontainer {
   padding-top: 30px;
