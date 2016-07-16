@@ -41,7 +41,6 @@ function initMap() {
       infoWindow.setContent('This is your closest QRide Provider.');
       map.setCenter(shortestPath);
 
-
       infoWindowTwo.setPosition(currPos);
       infoWindowTwo.setContent('You are currenlty here.');
       map.setCenter(currPos);
@@ -56,10 +55,7 @@ function initMap() {
 }
 
 
-////////////////////////////////////////////////////////
-//// Enables Map to work in Modal
-////////////////////////////////////////////////////////
-
+//Enables Map to work within the modal
 google.maps.event.addDomListener(window, 'load', initialize);
 
 google.maps.event.addDomListener(window, "resize", resizingMap());
@@ -82,7 +78,6 @@ function resizingMap() {
   google.maps.event.trigger(map, "resize");
   map.setCenter(center);
 }
-////////////////////////////////////////////////////////////////////////////////
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
